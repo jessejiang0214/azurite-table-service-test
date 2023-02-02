@@ -4,10 +4,11 @@ jobs:
   test:
     name: test azurite table services
     runs-on: windows-2022
+    defaults:
+      run:
+        working-directory: ./
     steps:
       - name: build
         run: dotnet build
-        working-directory: ./
       - name: test
         run: dotnet test
-        working-directory: ./
