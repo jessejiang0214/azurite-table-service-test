@@ -7,5 +7,7 @@ jobs:
     steps:
       - name: build
         run: dotnet build
+        working-directory: ./
       - name: test
         run: dotnet test
+        working-directory: ./
