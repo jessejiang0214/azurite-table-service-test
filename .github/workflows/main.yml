@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    name: test azurite table services
+    runs-on: windows-2022
+    steps:
+      - name: build
+        run: dotnet build
+      - name: test
+        run: dotnet test
